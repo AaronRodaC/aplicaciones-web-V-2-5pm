@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CyberShop | Celulares</title>
+
+    <!-- Estilos -->
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/font-awesome/css/all.min.css}" rel="stylesheet"/>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .navbar {
+            border-bottom: 1px solid #ddd;
+        }
+        .category-title {
+            color: #222;
+            font-weight: bold;
+        }
+        .product-card {
+            border: 1px solid #e1e1e1;
+            background: #fff;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            transition: 0.25s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product-price {
+            color: #0a0a0a;
+            font-weight: 600;
+        }
+        .sidebar {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+        <a class="navbar-brand" th:href="@{/}">
+            <img th:src="@{/img/logocybershop_96x96.png}" alt="CyberShop" height="40"/>
+        </a>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2">
+                <li class="nav-item"><a class="nav-link active" th:href="@{/celulares}">Celulares</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/computadoras}">Computadoras</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/hogar}">Hogar</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/componentes}">Componentes</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/monitores}">Monitores</a></li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+                <a href="#" class="btn btn-outline-dark me-2">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="#" class="btn btn-warning text-white">Iniciar Sesión</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container-fluid mt-4">
+
+    <div class="row">
+        <!-- SIDEBAR -->
+        <div class="col-md-2">
+            <div class="sidebar">
+                <h5 class="category-title">Celulares</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Samsung</a></li>
+                    <li><a href="#" class="text-decoration-none">Apple</a></li>
+                    <li><a href="#" class="text-decoration-none">Xiaomi</a></li>
+                    <li><a href="#" class="text-decoration-none">Honor</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PRODUCTOS -->
+        <div class="col-md-10">
+            <h4 class="category-title mb-4">Celulares</h4>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+
+                <!-- Producto 1 -->
+                <div class="col">
+                    <div class="product-card">
+                        <img th:src="@{/img/samsung-galaxy-s24-ultra.png}" class="img-fluid mb-2"/>
+                        <p><strong>Samsung</strong><br>S24 Ultra</p>
+                        <p class="product-price">₡550 000</p>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="col">
+                    <div class="product-card">
+                        <img th:src="@{/img/HonorMagic6.png}" class="img-fluid mb-2"/>
+                        <p><strong>Honor</strong><br>Magic 6 Lite</p>
+                        <p class="product-price">₡150 500</p>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="col">
+                    <div class="product-card">
+                        <img th:src="@{/img/iphone.png}" class="img-fluid mb-2"/>
+                        <p><strong>Apple</strong><br>iPhone 17 Pro</p>
+                        <p class="product-price">₡850 000</p>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="col">
+                    <div class="product-card">
+                        <img th:src="@{/img/xiaomi14c.png}" class="img-fluid mb-2"/>
+                        <p><strong>Xiaomi</strong><br>14C</p>
+                        <p class="product-price">₡82 560</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

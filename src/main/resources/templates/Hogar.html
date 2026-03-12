@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CyberShop | Hogar</title>
+
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+
+    <style>
+        body { background:#f8f9fa; }
+        .product-card { border:1px solid #ddd; background:white; padding:12px; border-radius:8px; text-align:center; transition:.2s; height:100%; display:flex; flex-direction:column; }
+        .product-card:hover { box-shadow:0 4px 15px rgba(0,0,0,0.12); transform:translateY(-5px); }
+        .product-price { font-weight:600; color:#007bff; margin-top:8px; }
+        .product-img { height:160px; object-fit:contain; }
+        .stock { color:green; font-weight:600; margin-top:6px; }
+        .buy-row { margin-top:auto; }
+        .info-banner { background: #1e1e1e; color: white; padding: 40px 15px; margin-top: 100px; }
+        .page-space { margin-bottom: 40px; }
+    </style>
+</head>
+
+<body>
+
+<nav th:replace="~{layout/plantilla :: header}"></nav>
+
+<div class="container mt-4 page-space">
+    <h3 class="mb-4">Hogar</h3>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+        <!-- Aspiradora -->
+        <div class="col">
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71H0PjN8w7L._AC_SL1500_.jpg" alt="Aspiradora" class="img-fluid product-img mb-2"/>
+                <div class="card-body">
+                    <p><strong>Aspiradora Samsung</strong></p>
+                    <p class="product-price">₡59 900</p>
+                    <p class="stock">Stock: 10</p>
+                    <div class="buy-row">
+                        <form action="/carrito/agregar" method="post" class="d-flex gap-2">
+                            <input type="hidden" name="productoId" value="201">
+                            <input type="number" name="cantidad" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                            <button class="btn btn-success btn-sm" type="submit">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ventilador -->
+        <div class="col">
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71pyJcLa49L._AC_SL1500_.jpg" alt="Ventilador" class="img-fluid product-img mb-2"/>
+                <div class="card-body">
+                    <p><strong>Ventilador Torre</strong></p>
+                    <p class="product-price">₡19 500</p>
+                    <p class="stock">Stock: 25</p>
+                    <div class="buy-row">
+                        <form action="/carrito/agregar" method="post" class="d-flex gap-2">
+                            <input type="hidden" name="productoId" value="202">
+                            <input type="number" name="cantidad" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                            <button class="btn btn-success btn-sm" type="submit">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Licuadora -->
+        <div class="col">
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/61Z0U6cPzvL._AC_SL1500_.jpg" alt="Licuadora" class="img-fluid product-img mb-2"/>
+                <div class="card-body">
+                    <p><strong>Licuadora Oster</strong></p>
+                    <p class="product-price">₡22 900</p>
+                    <p class="stock">Stock: 18</p>
+                    <div class="buy-row">
+                        <form action="/carrito/agregar" method="post" class="d-flex gap-2">
+                            <input type="hidden" name="productoId" value="203">
+                            <input type="number" name="cantidad" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                            <button class="btn btn-success btn-sm" type="submit">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cafetera -->
+        <div class="col">
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71pwxsVXFDL._AC_SL1500_.jpg" alt="Cafetera" class="img-fluid product-img mb-2"/>
+                <div class="card-body">
+                    <p><strong>Cafetera Black+Decker</strong></p>
+                    <p class="product-price">₡29 900</p>
+                    <p class="stock">Stock: 14</p>
+                    <div class="buy-row">
+                        <form action="/carrito/agregar" method="post" class="d-flex gap-2">
+                            <input type="hidden" name="productoId" value="204">
+                            <input type="number" name="cantidad" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                            <button class="btn btn-success btn-sm" type="submit">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- (más productos...) -->
+
+    </div>
+</div>
+
+<!-- BANNER INFORMATIVO -->
+<div class="info-banner text-center">
+    <h4>CyberShop</h4>
+    <p>📍 San José Centro — Condominio Las Américas</p>
+    <p>📞 Tel: +506 2276-5036</p>
+    <p>🏆 Más de 10 años reconocidos en tecnología</p>
+    <p>💬 Mensajes al privado para atención inmediata</p>
+    <p>🌐 www.cybershop.cr</p>
+</div>
+
+<footer th:replace="~{layout/plantilla :: footer}"></footer>
+
+</body>
+</html>

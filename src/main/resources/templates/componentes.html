@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CyberShop | Componentes</title>
+
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/font-awesome/css/all.min.css}" rel="stylesheet"/>
+
+    <style>
+        .product-card {
+            border:1px solid #ddd;
+            background:white;
+            border-radius:8px;
+            padding:12px;
+            text-align:center;
+            transition:.2s;
+            height:100%;
+        }
+        .product-card:hover {
+            transform:translateY(-5px);
+            box-shadow:0 4px 15px rgba(0,0,0,0.1);
+        }
+        .product-price {
+            font-weight:600;
+            color:#007bff;
+        }
+        .stock {
+            font-size:14px;
+            color:green;
+            font-weight:bold;
+        }
+        .btn-buy {
+            margin-top:10px;
+        }
+
+        .info-banner {
+            background: #1e1e1e;
+            color: white;
+            padding: 32px 15px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav th:replace="~{layout/plantilla :: header}"></nav>
+
+<div class="container mt-4">
+    <h3 class="mb-4">Componentes</h3>
+
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+
+        <!-- RAM -->
+        <div class="col">
+            <div class="product-card">
+                <img th:src="@{/img/ram.png}" class="img-fluid mb-2"/>
+                <p><strong>Memoria RAM</strong><br>16GB DDR4</p>
+                <p class="product-price">₡45 000</p>
+                <p class="stock">Stock: 12 unidades</p>
+                <button class="btn btn-primary btn-sm btn-buy">Comprar</button>
+            </div>
+        </div>
+
+        <!-- SSD -->
+        <div class="col">
+            <div class="product-card">
+                <img th:src="@{/img/ssd.png}" class="img-fluid mb-2"/>
+                <p><strong>SSD NVMe</strong><br>1TB</p>
+                <p class="product-price">₡55 000</p>
+                <p class="stock">Stock: 8 unidades</p>
+                <button class="btn btn-primary btn-sm btn-buy">Comprar</button>
+            </div>
+        </div>
+
+        <!-- RTX 4060 -->
+        <div class="col">
+            <div class="product-card">
+                <img th:src="@{/img/rtx4060.png}" class="img-fluid mb-2"/>
+                <p><strong>Nvidia RTX 4060</strong></p>
+                <p class="product-price">₡320 000</p>
+                <p class="stock">Stock: 3 unidades</p>
+                <button class="btn btn-primary btn-sm btn-buy">Comprar</button>
+            </div>
+        </div>
+
+        <!-- PSU -->
+        <div class="col">
+            <div class="product-card">
+                <img th:src="@{/img/fuente.png}" class="img-fluid mb-2"/>
+                <p><strong>PSU 750W</strong><br>Certificación Bronze</p>
+                <p class="product-price">₡42 900</p>
+                <p class="stock">Stock: 15 unidades</p>
+                <button class="btn btn-primary btn-sm btn-buy">Comprar</button>
+            </div>
+        </div>
+
+        <!-- Mouse gamer -->
+        <div class="col">
+            <div class="product-card">
+                <img th:src="@{/img/mouse.png}" class="img-fluid mb-2"/>
+                <p><strong>Mouse Gamer RGB</strong><br>16000 DPI</p>
+                <p class="product-price">₡12 900</p>
+                <p class="stock">Stock: 30 unidades</p>
+                <button class="btn btn-primary btn-sm btn-buy">Comprar</button>
+            </div>
+        </div>
+
+        <!-- Teclado -->
+        <div class="col">
+            <div class="product-card">
+                <img th:src="@{/img/teclado.png}" class="img-fluid mb-2"/>
+                <p><strong>Teclado Mecánico</strong><br>RGB Switch Red</p>
+                <p class="product-price">₡27 500</p>
+                <p class="stock">Stock: 10 unidades</p>
+                <button class="btn btn-primary btn-sm btn-buy">Comprar</button>
+            </div>
+        </div>
+
+        <!-- Monitor -->
+        <div class="col">
+            <div class="product-card">
+                <img th:src="@{/img/monitor.png}" class="img-fluid mb-2"/>
+                <p><strong>Monitor 27"</strong><br>144Hz IPS</p>
+                <p class="product-price">₡135 000</p>
+                <p class="stock">Stock: 5 unidades</p>
+                <button class="btn btn-primary btn-sm btn-buy">Comprar</button>
+            </div>
+        </div>
+
+        <!-- Placa madre -->
+        <div class="col">
+            <div class="product-card">
+                <img th:src="@{/img/motherboard.png}" class="img-fluid mb-2"/>
+                <p><strong>Motherboard</strong><br>AM5 DDR5</p>
+                <p class="product-price">₡89 000</p>
+                <p class="stock">Stock: 7 unidades</p>
+                <button class="btn btn-primary btn-sm btn-buy">Comprar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- BANNER INFERIOR -->
+<div class="info-banner text-center">
+    <h4>CyberShop</h4>
+    <p>📍 San José Centro — Condominio Las Américas</p>
+    <p>📞 Tel: +506 2276-5036</p>
+    <p>🏆 Más de 10 años reconocidos en tecnología</p>
+    <p>💬 Mensajes al privado para atención inmediata</p>
+    <p>🌐 www.cybershop.cr</p>
+</div>
+
+<footer th:replace="~{layout/plantilla :: footer}"></footer>
+
+</body>
+</html>

@@ -4,40 +4,71 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity">
 
 <head th:replace="~{layout/plantilla :: head}">
-    <title>Hi beauty</title>
+    <title>CyberShop</title>
     <meta charset="UTF-8"/>
 </head>
 
 <body>
 
-    <!-- Header global -->
-    <header th:replace="~{layout/plantilla :: header}"/>
+    <header th:replace="~{layout/plantilla :: header}"></header>
 
-    <!-- AQUÍ VA TU CONTENIDO PRINCIPAL -->
-    <main class="container my-5">
+    <main class="container mt-4">
 
-        
+        <h2 class="mb-4 text-center">Ofertas por tiempo limitado</h2>
 
-        <!-- Ofertas -->
-        <h2 class="mb-4">Ofertas por tiempo limitado</h2>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+         
             <div class="col">
-                <img src="/fav/jabon.png" style="width: 300px; height: 200px;" alt="Producto 1">
+                <div class="card shadow-sm">
+                    <img th:src="@{/img/LenovoLaptop.png}" class="card-img-top" style="height: 200px;" alt="Laptop Lenovo">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop Lenovo</h5>
+                        <p class="card-text">Oferta especial por tiempo limitado.</p>
+                        <a th:href="@{/producto/detalle/1}" class="btn btn-primary w-100">Ver más</a>
+                    </div>
+                </div>
             </div>
+
             <div class="col">
-                <img src="/fav/ceraVe.jpeg" style="width: 300px; height: 200px;" alt="Producto 2">
+                <div class="card shadow-sm">
+                    <img th:src="@{/img/samsung-galaxy-s24-ultra.png}" class="card-img-top" style="height: 200px;" alt="Samsung S24 Ultra">
+                    <div class="card-body">
+                        <h5 class="card-title">Samsung S24 Ultra</h5>
+                        <p class="card-text">Últimas unidades disponibles.</p>
+                        <a th:href="@{/producto/detalle/2}" class="btn btn-primary w-100">Ver más</a>
+                    </div>
+                </div>
             </div>
+
             <div class="col">
-                <img src="/fav/mascarilla.jpg" style="width: 300px; height: 200px;" alt="Producto 3">
+                <div class="card shadow-sm">
+                    <img th:src="@{/img/pcGamer.png}" class="card-img-top" style="height: 200px;" alt="PC Gamer">
+                    <div class="card-body">
+                        <h5 class="card-title">PC Gamer</h5>
+                        <p class="card-text">Potencia máxima para gamers.</p>
+                        <a th:href="@{/producto/detalle/3}" class="btn btn-primary w-100">Ver más</a>
+                    </div>
+                </div>
             </div>
+
             <div class="col">
-                <img src="/fav/Mascara_de_pestañas.jpg" style="width: 300px; height: 200px;" alt="Producto 4">
+                <div class="card shadow-sm">
+                    <img th:src="@{/img/ipad.png}" class="card-img-top" style="height: 200px;" alt="iPad">
+                    <div class="card-body">
+                        <h5 class="card-title">iPad</h5>
+                        <p class="card-text">Ideal para estudiar y trabajar.</p>
+                        <a th:href="@{/producto/detalle/4}" class="btn btn-primary w-100">Ver más</a>
+                    </div>
+                </div>
             </div>
+
         </div>
+
     </main>
 
-    <!-- Footer global -->
-    <footer th:replace="~{layout/plantilla :: footer}"/>
+    <!-- Footer -->
+    <footer th:replace="~{layout/plantilla :: footer}"></footer>
 
 </body>
 </html>

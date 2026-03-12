@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CyberShop | Computadoras</title>
+
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/font-awesome/css/all.min.css}" rel="stylesheet"/>
+
+    <style>
+        body { background:#f8f9fa; font-family:'Segoe UI', sans-serif; }
+        .product-card { border:1px solid #ddd; background:white; border-radius:8px; padding:12px; text-align:center; transition:.2s; height:100%; display:flex; flex-direction:column; }
+        .product-card:hover { box-shadow:0 4px 15px rgba(0,0,0,0.1); transform:translateY(-5px); }
+        .product-price { font-weight:600; color:#007bff; margin-top:8px; }
+        .prod-img { height:170px; object-fit:contain; }
+        .stock { font-size:0.9rem; color:green; margin-top:6px; }
+        .card-body { flex:1; display:flex; flex-direction:column; justify-content:flex-start; }
+        .buy-row { margin-top:auto; }
+        .info-banner { background: #1e1e1e; color: white; padding: 28px 15px; margin-top: 100px; }
+    </style>
+</head>
+
+<body>
+
+<nav th:replace="~{layout/plantilla :: header}"></nav>
+
+<div class="container mt-4">
+    <h3 class="mb-4">Computadoras</h3>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+        <!-- 1 Lenovo -->
+        <div class="col">
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/61Qe0u7ZLkL._AC_SL1500_.jpg" alt="Lenovo IdeaPad" class="img-fluid prod-img mb-2"/>
+                <div class="card-body">
+                    <p><strong>Lenovo IdeaPad</strong><br>15.6&quot; Ryzen 5</p>
+                    <p class="product-price">₡315 000</p>
+                    <p class="stock">Stock: 12</p>
+
+                    <div class="buy-row">
+                        <form action="/carrito/agregar" method="post" class="d-flex gap-2">
+                            <input type="hidden" name="productoId" value="101">
+                            <input type="number" name="cantidad" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                            <button class="btn btn-success btn-sm" type="submit">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 HP Pavilion -->
+        <div class="col">
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71kQy5M8P7L._AC_SL1500_.jpg" alt="HP Pavilion" class="img-fluid prod-img mb-2"/>
+                <div class="card-body">
+                    <p><strong>HP Pavilion</strong><br>i5 12th Gen</p>
+                    <p class="product-price">₡420 000</p>
+                    <p class="stock">Stock: 9</p>
+
+                    <div class="buy-row">
+                        <form action="/carrito/agregar" method="post" class="d-flex gap-2">
+                            <input type="hidden" name="productoId" value="102">
+                            <input type="number" name="cantidad" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                            <button class="btn btn-success btn-sm" type="submit">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 MacBook Air -->
+        <div class="col">
+            <div class="product-card">
+                <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba15-midnight-select-202306?wid=904&hei=840&fmt=jpeg&qlt=80" alt="MacBook Air" class="img-fluid prod-img mb-2"/>
+                <div class="card-body">
+                    <p><strong>MacBook Air</strong><br>M2 2023</p>
+                    <p class="product-price">₡1 250 000</p>
+                    <p class="stock">Stock: 4</p>
+
+                    <div class="buy-row">
+                        <form action="/carrito/agregar" method="post" class="d-flex gap-2">
+                            <input type="hidden" name="productoId" value="103">
+                            <input type="number" name="cantidad" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                            <button class="btn btn-success btn-sm" type="submit">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 ASUS ROG -->
+        <div class="col">
+            <div class="product-card">
+                <img src="https://dlcdnwebimgs.asus.com/gain/9d70906bc6d44f7e87af15a68fcb9ae1/w800" alt="ASUS ROG" class="img-fluid prod-img mb-2"/>
+                <div class="card-body">
+                    <p><strong>ASUS ROG Strix</strong><br>RTX 3060</p>
+                    <p class="product-price">₡720 000</p>
+                    <p class="stock">Stock: 6</p>
+
+                    <div class="buy-row">
+                        <form action="/carrito/agregar" method="post" class="d-flex gap-2">
+                            <input type="hidden" name="productoId" value="104">
+                            <input type="number" name="cantidad" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                            <button class="btn btn-success btn-sm" type="submit">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 Dell Inspiron -->
+        <div class="col">
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/61W0HqmD8CL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Dell Inspiron" class="img-fluid prod-img mb-2"/>
+                <div class="card-body">
+                    <p><strong>Dell Inspiron</strong><br>Core i7</p>
+                    <p class="product-price">₡530 000</p>
+                    <p class="stock">Stock: 7</p>
+
+                    <div class="buy-row">
+                        <form action="/carrito/agregar" method="post" class="d-flex gap-2">
+                            <input type="hidden" name="productoId" value="105">
+                            <input type="number" name="cantidad" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                            <button class="btn btn-success btn-sm" type="submit">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6 Acer Nitro -->
+        <div class="col">
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/71evs2WK6nL.jpg" alt="Acer Nitro 5" class="img-fluid prod-img mb-2"/>
+                <div class="card-body">
+                    <p><strong>Acer Nitro 5</strong><br>GTX 1650</p>
+                    <p class="product-price">₡595 000</p>
+                    <p class="stock">Stock: 5</p>
+
+                    <div class="buy-row">
+                        <form action="/carrito/agregar" method="post" class="d-flex gap-2">
+                            <input type="hidden" name="productoId" value="106">
+                            <input type="number" name="cantidad" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                            <button class="btn btn-success btn-sm" type="submit">Comprar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- (puedes duplicar más tarjetas para tener más columnas/productos) -->
+
+    </div>
+</div>
+
+<!-- Banner informativo -->
+<div class="info-banner text-center">
+    <h4>CyberShop</h4>
+    <p>📍 San José Centro — Condominio Las Américas</p>
+    <p>📞 Tel: +506 2276-5036</p>
+    <p>🏆 Más de 10 años reconocidos en tecnología</p>
+    <p>💬 Mensajes al privado para atención inmediata</p>
+    <p>🌐 www.cybershop.cr</p>
+</div>
+
+<footer th:replace="~{layout/plantilla :: footer}"></footer>
+
+</body>
+</html>
