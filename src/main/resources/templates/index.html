@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity">
+
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Salchi & Friends</title>
+</head>
+
+<body>
+
+<header th:replace="~{layout/plantilla :: header}"></header>
+
+<main class="pagina-inicio py-5">
+    <div class="container">
+
+        <section class="hero-prototipo text-center mb-5">
+            <h2 class="titulo-seccion">Productos destacados</h2>
+            <p class="subtitulo-seccion">
+                Bienvenido a <strong>Salchi&Friends</strong>, la tienda donde encuentras todo para tus mascotas
+            </p>
+        </section>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card tarjeta-producto h-100">
+                    <div class="contenedor-imagen">
+                        <img th:src="@{/img/Ropa_perro.png}" class="img-producto" alt="Producto 1"/>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="titulo-producto">Pijama</h5>
+                        <p class="descripcion-producto">Pillama para tu perro pequeño</p>
+                        <p class="precio-producto">₡5 000</p>
+                        <a th:href="@{/producto/detalle/1}" class="btn btn-vermas mt-auto">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card tarjeta-producto h-100">
+                    <div class="contenedor-imagen">
+                        <img th:src="@{/img/Taza_para_perro1.png}" class="img-producto" alt="Producto 2"/>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="titulo-producto">Taza para perro</h5>
+                        <p class="descripcion-producto">Taza para perros ansiosos.</p>
+                        <p class="precio-producto">₡8 500</p>
+                        <a th:href="@{/producto/detalle/2}" class="btn btn-vermas mt-auto">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card tarjeta-producto h-100">
+                    <div class="contenedor-imagen">
+                        <img th:src="@{/img/Juguete_para_perro1.png}" class="img-producto" alt="Producto 3"/>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="titulo-producto">Juguete para perro</h5>
+                        <p class="descripcion-producto">Juguete para perro "Tira y afloja".</p>
+                        <p class="precio-producto">₡5 900</p>
+                        <a th:href="@{/producto/detalle/3}" class="btn btn-vermas mt-auto">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="card tarjeta-producto h-100">
+                    <div class="contenedor-imagen">
+                        <img th:src="@{/img/Premios_gato1.png}" class="img-producto" alt="Producto 4"/>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="titulo-producto">Premios para gato</h5>
+                        <p class="descripcion-producto">Empanada rellena para gato.</p>
+                        <p class="precio-producto">₡6 750</p>
+                        <a th:href="@{/producto/detalle/4}" class="btn btn-vermas mt-auto">Ver más</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer th:replace="~{layout/plantilla :: footer}"></footer>
+
+</body>
+</html>

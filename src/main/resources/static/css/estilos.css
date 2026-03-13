@@ -1,0 +1,196 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d8dfd2;
+}
+
+.pagina-inicio {
+    background-color: #d8dfd2;
+    min-height: 100vh;
+}
+
+.hero-prototipo {
+    margin-bottom: 2rem;
+}
+
+.titulo-seccion {
+    color: #12241d;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+}
+
+.subtitulo-seccion {
+    color: #243229;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* NAVBAR */
+.navbar-salchi {
+    background: linear-gradient(90deg, #171b22, #1f2730);
+    padding: 10px 0;
+}
+
+.logo-navbar {
+    width: 170px;
+    height: auto;
+    display: block;
+}
+
+.navbar-salchi .nav-link {
+    color: #d8d8d8 !important;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.navbar-salchi .nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* BUSCADOR */
+.buscador-navbar .form-control {
+    border-radius: 8px;
+    min-width: 220px;
+}
+
+.buscador-navbar .btn {
+    border-radius: 8px;
+}
+
+/* ICONOS */
+.iconos-navbar .icono-btn {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.iconos-navbar .icono-btn i {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+/* TARJETAS */
+.tarjeta-producto {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f4f4f1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.contenedor-imagen {
+    width: 100%;
+    height: 240px;
+    background-color: #ecece8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    overflow: hidden;
+}
+
+.img-producto {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.tarjeta-producto .card-body {
+    padding: 1.2rem;
+}
+
+.titulo-producto {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #13231d;
+    margin-bottom: 6px;
+}
+
+.descripcion-producto {
+    font-size: 0.95rem;
+    color: #445148;
+    min-height: 48px;
+    margin-bottom: 12px;
+}
+
+.precio-producto {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2c7a3f;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+/* BOTON */
+.btn-vermas {
+    background-color: transparent;
+    border: none;
+    color: #13231d;
+    font-weight: 500;
+    padding: 0.4rem 0;
+    text-align: center;
+}
+
+.btn-vermas:hover {
+    color: #000;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+/* FOOTER */
+.footer-salchi {
+    background-color: #6c7781;
+    color: white;
+    padding: 12px 0;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .titulo-seccion {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-imagen {
+        height: 200px;
+    }
+
+    .titulo-seccion {
+        font-size: 1.9rem;
+    }
+
+    .logo-navbar {
+        width: 140px;
+    }
+
+    .buscador-navbar .form-control {
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contenedor-imagen {
+        height: 180px;
+    }
+
+    .iconos-navbar {
+        margin-top: 10px;
+    }
+}

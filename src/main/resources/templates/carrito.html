@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de Compras</title>
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+</head>
+<body class="container mt-4">
+
+<h2>🛒 Carrito de Compras</h2>
+
+<table class="table table-bordered mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th>ID Producto</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="item : ${carrito}">
+            <td th:text="${item.key}"></td>
+            <td th:text="${item.value}"></td>
+        </tr>
+    </tbody>
+</table>
+
+<a th:href="@{/}" class="btn btn-primary">⬅ Seguir comprando</a>
+
+</body>
+</html>

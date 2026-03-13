@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CyberShop | Registro</title>
+
+    <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/webjars/font-awesome/css/all.min.css}" rel="stylesheet"/>
+
+    <style>
+        body {
+            background: #f0f2f5;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .register-container {
+            max-width: 450px;
+            margin: 60px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        .logo {
+            width: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="register-container">
+
+    <div class="text-center mb-3">
+        <img th:src="@{/img/logocybershop_96x96.png}" class="logo" alt="Logo">
+        <h3 class="mt-2">Crear una cuenta</h3>
+        <p class="text-muted">Completa los siguientes datos para registrarte</p>
+    </div>
+
+    <!-- FORMULARIO DE REGISTRO -->
+    <form th:action="@{/registro}" th:object="${usuario}" method="post">
+
+        <!-- Nombre -->
+        <div class="mb-3">
+            <label class="form-label">Nombre completo</label>
+            <input type="text" th:field="*{nombre}" class="form-control"
+                   placeholder="Ej: Juan Pérez" required>
+        </div>
+
+        <!-- Correo -->
+        <div class="mb-3">
+            <label class="form-label">Correo electrónico</label>
+            <input type="email" th:field="*{correo}" class="form-control"
+                   placeholder="correo@ejemplo.com" required>
+        </div>
+
+        <!-- Usuario -->
+        <div class="mb-3">
+            <label class="form-label">Nombre de usuario</label>
+            <input type="text" th:field="*{username}" class="form-control"
+                   placeholder="Nombre de usuario" required>
+        </div>
+
+        <!-- Contraseña -->
+        <div class="mb-3">
+            <label class="form-label">Contraseña</label>
+            <input type="password" th:field="*{password}" class="form-control"
+                   placeholder="Mínimo 6 caracteres" minlength="6" required>
+        </div>
+
+        <!-- Confirmación -->
+        <div class="mb-4">
+            <label class="form-label">Confirmar contraseña</label>
+            <input type="password" th:field="*{confirmarPassword}" class="form-control"
+                   placeholder="Repite la contraseña" minlength="6" required>
+        </div>
+
+        <!-- Botón -->
+        <button class="btn btn-primary">
+            <i class="fa fa-user-plus"></i> Registrarme
+        </button>
+
+    </form>
+
+    <div class="text-center mt-3">
+        <p>¿Ya tienes cuenta?
+            <a th:href="@{/login}" class="text-primary">Inicia sesión</a>
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

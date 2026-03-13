@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity">
+
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Alimentos | Salchi & Friends</title>
+    </head>
+
+    <body>
+
+        <header th:replace="~{layout/plantilla :: header}"></header>
+
+        <main class="pagina-inicio py-5">
+            <div class="container">
+
+                <!-- TITULO -->
+                <section class="hero-prototipo text-center mb-5">
+                    <h2 class="titulo-seccion">Alimentos</h2>
+                    <p class="subtitulo-seccion">
+                        Nutrición balanceada y saludable para el bienestar de tus mascotas
+                    </p>
+                </section>
+
+                <!-- PRODUCTOS -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+                    <!-- PRODUCTO 1 -->
+                    <div class="col">
+                        <div class="card tarjeta-producto h-100">
+
+                            <div class="contenedor-imagen">
+                                <img th:src="@{/img/Alimento_perro1.png}"
+                                     class="img-producto"
+                                     alt="Alimento para perro"/>
+                            </div>
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h5 class="titulo-producto">Alimento premium perro</h5>
+
+                                <p class="descripcion-producto">
+                                    Fórmula balanceada para perros adultos con nutrientes esenciales.
+                                </p>
+
+                                <p class="precio-producto">₡18 900</p>
+
+                                <a th:href="@{/producto/detalle/31}"
+                                   class="btn btn-vermas mt-auto">
+                                    Ver más
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PRODUCTO 2 -->
+                    <div class="col">
+                        <div class="card tarjeta-producto h-100">
+
+                            <div class="contenedor-imagen">
+                                <img th:src="@{/img/Alimento_perro_mimados.png}"
+                                     class="img-producto"
+                                     alt="Alimento para gato"/>
+                            </div>
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h5 class="titulo-producto">Alimento premium perro</h5>
+
+                                <p class="descripcion-producto">
+                                    Nutrición completa diseñada para perros de todas las edades.
+                                </p>
+
+                                <p class="precio-producto">₡12 500</p>
+
+                                <a th:href="@{/producto/detalle/32}"
+                                   class="btn btn-vermas mt-auto">
+                                    Ver más
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PRODUCTO 3 -->
+                    <div class="col">
+                        <div class="card tarjeta-producto h-100">
+
+                            <div class="contenedor-imagen">
+                                <img th:src="@{/img/Alimento_gato1.png}"
+                                     class="img-producto"
+                                     alt="Alimento gatito"/>
+                            </div>
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h5 class="titulo-producto">Alimento para gatitos</h5>
+
+                                <p class="descripcion-producto">
+                                    Especialmente formulado para el crecimiento saludable.
+                                </p>
+
+                                <p class="precio-producto">₡14 800</p>
+
+                                <a th:href="@{/producto/detalle/33}"
+                                   class="btn btn-vermas mt-auto">
+                                    Ver más
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PRODUCTO 4 -->
+                    <div class="col">
+                        <div class="card tarjeta-producto h-100">
+
+                            <div class="contenedor-imagen">
+                                <img th:src="@{/img/Alimento_gato_purina.png}"
+                                     class="img-producto"
+                                     alt="Alimento natural"/>
+                            </div>
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h5 class="titulo-producto">Alimento para gato purina</h5>
+
+                                <p class="descripcion-producto">
+                                    Alimento balanceado completo húmedo para gatos adultos de todas las razas con actividad normal.
+                                </p>
+
+                                <p class="precio-producto">₡17 400</p>
+
+                                <a th:href="@{/producto/detalle/34}"
+                                   class="btn btn-vermas mt-auto">
+                                    Ver más
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <footer th:replace="~{layout/plantilla :: footer}"></footer>
+
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity">
+
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Contáctanos | Salchi & Friends</title>
+    </head>
+
+    <body>
+
+        <header th:replace="~{layout/plantilla :: header}"></header>
+
+        <main class="pagina-inicio py-5">
+            <div class="container">
+
+                <!-- TITULO -->
+                <section class="hero-prototipo text-center mb-5">
+                    <h2 class="titulo-seccion">Contáctanos</h2>
+                    <p class="subtitulo-seccion">
+                        Si tienes alguna consulta sobre nuestros productos o servicios, estaremos felices de ayudarte.
+                    </p>
+                </section>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-8">
+
+                        <div class="card tarjeta-producto">
+
+                            <div class="card-body p-4">
+
+                                <h4 class="titulo-producto mb-4">Envíanos un mensaje</h4>
+
+                                <form>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Nombre</label>
+                                        <input type="text"
+                                               class="form-control"
+                                               placeholder="Ingresa tu nombre">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Correo electrónico</label>
+                                        <input type="email"
+                                               class="form-control"
+                                               placeholder="Ingresa tu correo">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Asunto</label>
+                                        <input type="text"
+                                               class="form-control"
+                                               placeholder="Escribe el asunto">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Mensaje</label>
+                                        <textarea class="form-control"
+                                                  rows="5"
+                                                  placeholder="Escribe tu mensaje"></textarea>
+                                    </div>
+
+                                    <button type="submit"
+                                            class="btn btn-vermas px-4">
+                                        Enviar mensaje
+                                    </button>
+
+                                </form>
+
+                                <hr class="my-4">
+
+                                    <!-- INFORMACION -->
+                                    <div class="row text-center">
+
+                                        <div class="col-md-4 mb-3">
+                                            <h5 class="titulo-producto">Correo</h5>
+                                            <p class="descripcion-producto mb-0">
+                                                salchiandfriends@gmail.com
+                                            </p>
+                                        </div>
+
+                                        <div class="col-md-4 mb-3">
+                                            <h5 class="titulo-producto">Teléfono</h5>
+                                            <p class="descripcion-producto mb-0">
+                                                +506 8888-8888
+                                            </p>
+                                        </div>
+
+                                        <div class="col-md-4 mb-3">
+                                            <h5 class="titulo-producto">Ubicación</h5>
+                                            <p class="descripcion-producto mb-0">
+                                                San José, Costa Rica
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <footer th:replace="~{layout/plantilla :: footer}"></footer>
+
+    </body>
+</html>

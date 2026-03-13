@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity">
+
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Ropa | Salchi & Friends</title>
+    </head>
+
+    <body>
+
+        <header th:replace="~{layout/plantilla :: header}"></header>
+
+        <main class="pagina-inicio py-5">
+            <div class="container">
+
+                <section class="hero-prototipo text-center mb-5">
+                    <h2 class="titulo-seccion">Ropa</h2>
+                    <p class="subtitulo-seccion">
+                        Prendas cómodas y adorables para que tu mascota luzca increíble
+                    </p>
+                </section>
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+                    <div class="col">
+                        <div class="card tarjeta-producto h-100">
+
+                            <div class="contenedor-imagen">
+                                <img th:src="@{/img/Ropa_perro.png}" class="img-producto" alt="Producto 1"/>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="titulo-producto">Pijama</h5>
+                                <p class="descripcion-producto">Pillama para tu perro pequeño</p>
+                                <p class="precio-producto">₡5 000</p>
+                                <a th:href="@{/producto/detalle/1}" class="btn btn-vermas mt-auto">Ver más</a>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card tarjeta-producto h-100">
+
+                            <div class="contenedor-imagen">
+                                <img th:src="@{/img/Ropa_perro_oso.png}"
+                                     class="img-producto"
+                                     alt="Chaqueta para perro"/>
+                            </div>
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h5 class="titulo-producto">Pillama de oso para perro</h5>
+
+                                <p class="descripcion-producto">
+                                    Perfecto para ir a dormir.
+                                </p>
+
+                                <p class="precio-producto">₡10 500</p>
+
+                                <a th:href="@{/producto/detalle/22}"
+                                   class="btn btn-vermas mt-auto">
+                                    Ver más
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card tarjeta-producto h-100">
+
+                            <div class="contenedor-imagen">
+                                <img th:src="@{/img/Ropa_bandana_perro.png}"
+                                     class="img-producto"
+                                     alt="Bandana"/>
+                            </div>
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h5 class="titulo-producto">Bandana elegante</h5>
+
+                                <p class="descripcion-producto">
+                                    Accesorio perfecto para un look adorable.
+                                </p>
+
+                                <p class="precio-producto">₡3 500</p>
+
+                                <a th:href="@{/producto/detalle/23}"
+                                   class="btn btn-vermas mt-auto">
+                                    Ver más
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card tarjeta-producto h-100">
+
+                            <div class="contenedor-imagen">
+                                <img th:src="@{/img/Ropa_baquero_perro.png}"
+                                     class="img-producto"
+                                     alt="Pijama para mascota"/>
+                            </div>
+
+                            <div class="card-body d-flex flex-column">
+
+                                <h5 class="titulo-producto">Disfraz para mascota</h5>
+
+                                <p class="descripcion-producto">
+                                    Tela cómoda y suave.
+                                </p>
+
+                                <p class="precio-producto">₡9 700</p>
+
+                                <a th:href="@{/producto/detalle/24}"
+                                   class="btn btn-vermas mt-auto">
+                                    Ver más
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+
+        <footer th:replace="~{layout/plantilla :: footer}"></footer>
+
+    </body>
+</html>
