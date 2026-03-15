@@ -16,9 +16,6 @@ public class CategoriaController {
     private CategoriaService categoriaService;
 
 
-    // -------------------------
-    //        CATEGORÍAS
-    // -------------------------
     @GetMapping("/juguetes")
     public String juguetes() {
         return "juguetes";
